@@ -1,3 +1,3 @@
 toggler.addEventListener("click", () => {
-    active.classList.toggle("nav1")
+    nav.classList.toggle("active")
 })

@@ -72,13 +72,12 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
     width: 1199px;
     position: absolute;
     left: 150px;
     top: 100px;
 }
-.nav ul {
+nav ul {
     display: flex;
     flex-direction: row;
     gap: 60px;
@@ -1508,6 +1507,7 @@ h6 {
     }
     .main-container {
         left: 40px;
+        /* display: none; */
     }
     .code {
         display: none;
@@ -1534,7 +1534,7 @@ h6 {
     .checked i {
         font-size: 50px;
     }
-    .nav ul {
+    #active ul {
         display: none;
     }
     .commencer {
@@ -1542,28 +1542,39 @@ h6 {
     }
     #toggler {
         display: block;
+        position: relative;
+        left: 130px;
         font-size: 80px;
         color: rgba(255, 255, 255, 1);
     }
     #toggler:before {
         content: "\2630";
     }
-    .nav1 #toggler:before {
+    .active #toggler:before {
         content: "\2613";
     }
-    div.nav ul {
+    nav ul {
         position: fixed;
-        left: -100%;
-        top: 2%;
+        top: -100%;
         flex-direction: column;
         background: rgba(1, 21, 22, 1);
         width: 100%;
-        text-align: center;
+        height: 33%;
         transition: 0.25s;
-        border: 1px solid;   
+        border: 1px solid;  
+        z-index: 1;
+        overflow: hidden;  
     }
-    .nav ul {
-        left: 100%;
+    nav li {
+        list-style: none;
+    }
+    nav li a {
+        text-align: center;
+        font-size: 30px;
+        color: rgba(255, 255, 255, 1);
+    }
+    nav.active ul {
+        top: 0;
     }
     .section1 {
         width: 100% auto;
@@ -1685,7 +1696,7 @@ h6 {
         text-align: justify;
     }
     .lorem-img {
-        width: 150%;
+        width: 170%;
         flex-wrap: wrap;
         margin-left: 90px;
     }
